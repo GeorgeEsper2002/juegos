@@ -27,6 +27,6 @@ class Comentario(models.Model):
     texto=models.TextField()
     fecha_pub=models.DateField()
     
-    
+#
     
     
