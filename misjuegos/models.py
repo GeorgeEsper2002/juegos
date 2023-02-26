@@ -9,7 +9,7 @@ class Juego(models.Model):
     titulo=models.CharField(max_length=50)
     tematica=models.CharField(max_length=10)
     estudio=models.CharField(max_length=50,blank=True) #El estudio que creo el juego
-    fecha=models.DateField(auto_now_add=True)
+    fecha=models.DateField()
     def __str__(self):
         return self.titulo
     

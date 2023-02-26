@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario-Agregar Juego</title>
-</head>
-<body>
+
+{%extends 'misjuegos/padre.html'%}
+    {%load static%}
+{%block contenidoQueCambia%}
+    <!--Aqui se colocan las creaciones de usuarios que pueden comentar o hacer reseñas-->
     <form action='/juegoformulario/' method='POST'>{% csrf_token %}
         <P> Titulo:<input type="text" name='titulo'>
         <P> Tematica:<input type="text" name='tematica'>
         <P> Estudio:<input type="text" name='estudio'>
         <P> Fecha:<input type="text" name='fecha'>
-        <input type='submit' value='enviar'>
-</body>
-</html>
+        <center><button type="submit" class="btn btn-success btn-lg">Ingresar Juego</button></center>
+        </form>
+    {%endblock%}
